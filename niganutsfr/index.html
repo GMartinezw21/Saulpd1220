@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Are you free September 7?</h1>
+            <h1 class="header_text">Will you go on a date with me to the aquarium?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3F0a2R5OHdyZHBpcnNkYjJlYnd2eXZqbmFpb2VyZXRqNTBtdG1uaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B8nZYMKamdfHy/giphy.webp" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+    const button = document.getElementById('noButton');
+    const x = Math.random() * (window.innerWidth - button.offsetWidth);
+    const y = Math.random() * (window.innerHeight - button.offsetHeight);
+    button.style.position = 'absolute';
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+}
+
+    </script>
+</body>
+</html>
